@@ -48,3 +48,5 @@ function routerResponse(request) {
         };
     }
 };
+
+module.exports = routerResponse;

@@ -1,7 +1,7 @@
-const router = require('./router');
+const routerResponse = require('./router');
 
 function buildHttpResponse(request) {
-    const route = router(request);
+    const route = routerResponse(request);
     let res = [];
 
     res.push("HTTP/1.1 " + route.statusCode + " " + route.statusMessage + "\r\n");
