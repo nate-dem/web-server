@@ -10,7 +10,8 @@ function newConn(socket) {
         const text = data.toString();
         console.log("Original text: ", text);
 
-        const response = "HTTP/1.1 200 OK\r\nContent-Type: text/plain\r\nContent-Length: 13\r\n\r\nHello, world!";
+        const request = httpParser(text);
+        const response = buildHttpResponse(request);
         socket.write(response);
 
         socket.end();
