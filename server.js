@@ -1,14 +1,15 @@
-const net = require("net")
+const net = require("net");
+const httpParser = require("./httpParser");
+const buildHttpResponse = require("./responseBuilder");
 
 function newConn(socket) {
     console.log('new connection', socket.remoteAddress, socket.remotePort);
 
     socket.on('end', () => {
-        console.log('EOF.');
+        console.log('End of File');
     });
     socket.on('data', (data) => {
         const text = data.toString();
-        console.log("Original text: ", text);
 
         const request = httpParser(text);
         const response = buildHttpResponse(request);
