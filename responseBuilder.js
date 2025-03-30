@@ -18,3 +18,5 @@ function buildHttpResponse(request) {
 
     return res.join('');
 };
+
+module.exports = buildHttpResponse;

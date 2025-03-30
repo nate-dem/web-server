@@ -25,3 +25,5 @@ function httpParser(text) {
 
     return res;
 };
+
+module.exports = httpParser;
