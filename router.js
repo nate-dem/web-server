@@ -10,7 +10,7 @@ function routerResponse(request) {
             statusCode: 200,
             statusMessage: 'OK',
             headers: {
-                'Content-Type': 'text/plain'
+                'Content-Type': 'text/html'
             },
             body: 'Welcome to my personal portfolio!'
         };
@@ -19,7 +19,7 @@ function routerResponse(request) {
             statusCode: 200,
             statusMessage: 'OK',
             headers: {
-                'Content-Type': 'text/plain'
+                'Content-Type': 'text/html'
             },
             body: 'Read this page to learn more about me!'
         };
@@ -28,7 +28,7 @@ function routerResponse(request) {
             statusCode: 200,
             statusMessage: 'OK',
             headers: {
-                'Content-Type': 'text/plain'
+                'Content-Type': 'text/html'
             },
             body: 'This page includes projects I have worked on.'
         };
@@ -37,7 +37,7 @@ function routerResponse(request) {
             statusCode: 200,
             statusMessage: 'OK',
             headers: {
-                'Content-Type': 'text/plain'
+                'Content-Type': 'text/html'
             },
             body: 'Contact me at natedem@stanford.edu'
         };
@@ -46,7 +46,7 @@ function routerResponse(request) {
             statusCode: 404,
             statusMessage: 'Not Found',
             headers: {
-                'Content-Type': 'text/plain'
+                'Content-Type': 'text/html'
             },
             body: 'Page not found.'
         };
