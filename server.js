@@ -1,6 +1,5 @@
 const net = require("net");
-const httpParser = require("./httpParser");
-const buildHttpResponse = require("./responseBuilder");
+const handleRequest = require("./handleRequest");
 
 function newConn(socket) {
     console.log('new connection', socket.remoteAddress, socket.remotePort);
@@ -9,12 +8,8 @@ function newConn(socket) {
         console.log('End of File');
     });
     socket.on('data', (data) => {
-        const text = data.toString();
-
-        const request = httpParser(text);
-        const response = buildHttpResponse(request);
+        const text = handleRequest(data);
         socket.write(response);
-
         socket.end();
     });
 }

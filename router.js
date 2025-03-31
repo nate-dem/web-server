@@ -1,3 +1,7 @@
+/*
+Messages are currently hardcoded into the responses. Will change to html pages once connected
+to my personal portfolio. Need to change content-type to text/html as well.
+*/
 function routerResponse(request) {
     const path = request.path.toLowerCase();
 
